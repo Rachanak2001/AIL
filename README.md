@@ -68,7 +68,7 @@ import numpy as np<br>
 import random<br>
 from time import sleep<br>
 <br>
-# Creates an empty board<br>
+#Creates an empty board<br>
 <br>
 
 def create_board():<br>

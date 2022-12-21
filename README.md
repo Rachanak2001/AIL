@@ -60,159 +60,160 @@ Enter the Target/Destination Node: 1<br>
 <br>
 Path: 2 0 1 <br>
 <br>
-**Tic-tac-toe**
-#Tic-Tac-Toe Program using random number in Python
+**Tic-tac-toe**<br>
+#Tic-Tac-Toe Program using random number in Python<br>
+<br>
+#importing all necessary libraries<br>
+import numpy as np<br>
+import random<br>
+from time import sleep<br>
+<br>
+# Creates an empty board<br>
+<br>
 
-#importing all necessary libraries
-import numpy as np
-import random
-from time import sleep
+def create_board():<br>
+    return(np.array([[0, 0, 0],<br>
+                     [0, 0, 0],<br>
+                     [0, 0, 0]]))<br>
+<br>
+#Check for empty places on board<br>
+<br>
 
-# Creates an empty board
+def possibilities(board):<br>
+    l = []<br>
+    for i in range(len(board)):<br>
+        for j in range(len(board)):<br>
+            if board[i][j] == 0:<br>
+                l.append((i, j))<br>
+    return(l)<br>
 
+#Select a random place for the player<br>
 
-def create_board():
-    return(np.array([[0, 0, 0],
-                     [0, 0, 0],
-                     [0, 0, 0]]))
+<br>
+def random_place(board, player):<br>
+    selection = possibilities(board)<br>
+    current_loc = random.choice(selection)<br>
+    board[current_loc] = player<br>
+    return(board)<br>
+<br>
+#Checks whether the player has three<br>
+#of their marks in a horizontal row<br>
 
-#Check for empty places on board
+<br>
+def row_win(board, player):<br>
+    for x in range(len(board)):<br>
+        win = True<br>
+        for y in range(len(board)):<br>
+            if board[x, y] != player:<br>
+                win = False<br>
+                continue<br>
+        if win == True:<br>
+            return(win)<br>
+    return(win)<br>
+<br>
+#Checks whether the player has three<br>
+#of their marks in a vertical row<br>
 
+<br>
+def col_win(board, player):<br>
+    for x in range(len(board)):<br>
+        win = True<br>
+        for y in range(len(board)):<br>
+            if board[y][x] != player:<br>
+                win = False<br>
+                continue<br>
+        if win == True:<br>
+            return(win)<br>
+    return(win)<br>
+<br>
+#Checks whether the player has three<br>
+#of their marks in a diagonal row<br>
+<br>
 
-def possibilities(board):
-    l = []
-    for i in range(len(board)):
-        for j in range(len(board)):
-            if board[i][j] == 0:
-                l.append((i, j))
-    return(l)
+def diag_win(board, player):<br>
+    win = True<br>
+    y = 0<br>
+    for x in range(len(board)):<br>
+        if board[x, x] != player:<br>
+            win = False<br>
+    if win:<br>
+        return win<br>
+    win = True<br>
+    if win:<br>
+        for x in range(len(board)):<br>
+            y = len(board) - 1 - x<br>
+            if board[x, y] != player:<br>
+                win = False<br>
+            return win<br>
+<br>
+#Evaluates whether there is<br>
+#a winner or a tie<br>
+<br>
 
-#Select a random place for the player
+def evaluate(board):<br>
+    winner = 0<br>
+    for player in [1, 2]:<br>
+        if (row_win(board, player) or<br>
+                col_win(board, player) or<br>
+                diag_win(board, player)):<br>
+            winner = player<br>
+    if np.all(board != 0) and winner == 0:<br>
+        winner = -1<br>
+    return winner<br>
+<br>
+#Main function to start the game<br>
 
-
-def random_place(board, player):
-    selection = possibilities(board)
-    current_loc = random.choice(selection)
-    board[current_loc] = player
-    return(board)
-
-#Checks whether the player has three
-#of their marks in a horizontal row
-
-
-def row_win(board, player):
-    for x in range(len(board)):
-        win = True
-        for y in range(len(board)):
-            if board[x, y] != player:
-                win = False
-                continue
-        if win == True:
-            return(win)
-    return(win)
-
-#Checks whether the player has three
-#of their marks in a vertical row
-
-
-def col_win(board, player):
-    for x in range(len(board)):
-        win = True
-        for y in range(len(board)):
-            if board[y][x] != player:
-                win = False
-                continue
-        if win == True:
-            return(win)
-    return(win)
-
-#Checks whether the player has three
-#of their marks in a diagonal row
-
-
-def diag_win(board, player):
-    win = True
-    y = 0
-    for x in range(len(board)):
-        if board[x, x] != player:
-            win = False
-    if win:
-        return win
-    win = True
-    if win:
-        for x in range(len(board)):
-            y = len(board) - 1 - x
-            if board[x, y] != player:
-                win = False
-            return win
-
-#Evaluates whether there is
-#a winner or a tie
-
-
-def evaluate(board):
-    winner = 0
-    for player in [1, 2]:
-        if (row_win(board, player) or
-                col_win(board, player) or
-                diag_win(board, player)):
-            winner = player
-    if np.all(board != 0) and winner == 0:
-        winner = -1
-    return winner
-
-#Main function to start the game
-
-
-def play_game():
-    board, winner, counter = create_board(), 0, 1
-    print(board)
-    sleep(2)
-
-    while winner == 0:
-        for player in [1, 2]:
-            board = random_place(board, player)
-            print("Board after " + str(counter) + " move")
-            print(board)
-            sleep(2)
-            counter += 1
-            winner = evaluate(board)
-            if winner != 0:
-                break
-    return(winner)
-#Driver Code
-print("Winner is: " + str(play_game()))
-
-**OUTPUT**
-[[0 0 0]
- [0 0 0]
- [0 0 0]]
-Board after 1 move
-[[0 0 0]
- [0 0 0]
- [0 1 0]]
-Board after 2 move
-[[0 2 0]
- [0 0 0]
- [0 1 0]]
-Board after 3 move
-[[0 2 0]
- [0 1 0]
- [0 1 0]]
-Board after 4 move
-[[2 2 0]
- [0 1 0]
- [0 1 0]]
-Board after 5 move
-[[2 2 0]
- [1 1 0]
- [0 1 0]]
-Board after 6 move
-[[2 2 0]
- [1 1 0]
- [0 1 2]]
-Board after 7 move
-[[2 2 1]
- [1 1 0]
- [0 1 2]]
-Winner is: 1
+<br>
+def play_game():<br>
+    board, winner, counter = create_board(), 0, 1<br>
+    print(board)<br>
+    sleep(2)<br>
+<br>
+    while winner == 0:<br>
+        for player in [1, 2]:<br>
+            board = random_place(board, player)<br>
+            print("Board after " + str(counter) + " move")<br>
+            print(board)<br>
+            sleep(2)<br>
+            counter += 1<br>
+            winner = evaluate(board)<br>
+            if winner != 0:<br>
+                break<br>
+    return(winner)<br>
+#Driver Code<br>
+print("Winner is: " + str(play_game()))<br>
+<br>
+**OUTPUT**<br>
+[[0 0 0]<br>
+ [0 0 0]<br>
+ [0 0 0]]<br>
+Board after 1 move<br>
+[[0 0 0]<br>
+ [0 0 0]<br>
+ [0 1 0]]<br>
+Board after 2 move<br>
+[[0 2 0]<br>
+ [0 0 0]<br>
+ [0 1 0]]<br>
+Board after 3 move<br>
+[[0 2 0]<br>
+ [0 1 0]<br>
+ [0 1 0]]<br>
+Board after 4 move<br>
+[[2 2 0]<br>
+ [0 1 0]<br>
+ [0 1 0]]<br>
+Board after 5 move<br>
+[[2 2 0]<br>
+ [1 1 0]<br>
+ [0 1 0]]<br>
+Board after 6 move<br>
+[[2 2 0]<br>
+ [1 1 0]<br>
+ [0 1 2]]<br>
+Board after 7 move<br>
+[[2 2 1]<br>
+ [1 1 0]<br>
+ [0 1 2]]<br>
+Winner is: 1<br>
+<br>

@@ -8,6 +8,8 @@ https://github.com/roshancyriacmathew/hate-speech-detection-using-machine-learni
 
 https://github.com/hate-alert/IndicAbusive
 
+https://github.com/vidhur2k/Multilngual-Hate-Speech
+
 
 **Best first search**<br>
 from queue import PriorityQueue <br><br>

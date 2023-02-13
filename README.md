@@ -12,6 +12,8 @@ https://github.com/vidhur2k/Multilngual-Hate-Speech
 
 https://www.startertutorials.com/blog/digital-forensics-life-cycle.html
 
+https://www.rcybersolutions.com/cybersecurity-real-life-cases-solved-by-digital-forensic-evidence/
+
 
 **Best first search**<br>
 from queue import PriorityQueue <br><br>

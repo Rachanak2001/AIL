@@ -10,6 +10,8 @@ https://github.com/hate-alert/IndicAbusive
 
 https://github.com/vidhur2k/Multilngual-Hate-Speech
 
+https://www.startertutorials.com/blog/digital-forensics-life-cycle.html
+
 
 **Best first search**<br>
 from queue import PriorityQueue <br><br>

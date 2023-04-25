@@ -2,7 +2,7 @@
 
 https://hatespeechdata.com/
 
-https://github.com/AI4Bharat/indicnlp_catalog#PreTrainedLanguageModels
+* https://github.com/AI4Bharat/indicnlp_catalog#PreTrainedLanguageModels
 
 https://github.com/mandar196/Hate_Speech_Detection-NLP
 

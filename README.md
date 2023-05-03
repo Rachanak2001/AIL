@@ -1,5 +1,7 @@
 # AIL
 
+https://github.com/buomsoo-kim/Word-embedding-with-Python/blob/master/word2vec/source%20code/word2vec.ipynb
+
 https://hatespeechdata.com/
 
 * https://github.com/AI4Bharat/indicnlp_catalog#PreTrainedLanguageModels

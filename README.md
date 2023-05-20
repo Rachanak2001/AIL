@@ -1,5 +1,7 @@
 # AIL
 
+https://analyticsindiamag.com/hands-on-guide-to-word-embeddings-using-glove/#:~:text=The%20basic%20idea%20behind%20the,pair%20of%20words%20occurring%20together.
+
 https://blog.ekbana.com/loading-glove-pre-trained-word-embedding-model-from-text-file-faster-5d3e8f2b8455
 
 https://github.com/wendear7508/Doc-classification--20-newsgroups/blob/master/glove%20100d%20visualization.ipynb

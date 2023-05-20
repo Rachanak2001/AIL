@@ -1,5 +1,7 @@
 # AIL
 
+https://www.youtube.com/watch?v=6uxVtUMtqtk   -Glove (feature extraction)
+
 https://github.com/abulbasar/neural-networks/blob/master/Keras%2010%20-%20Text%20classification%20using%20pre-trained%20GloVe%20Word%20Embeddings.ipynb
 
 https://analyticsindiamag.com/hands-on-guide-to-word-embeddings-using-glove/#:~:text=The%20basic%20idea%20behind%20the,pair%20of%20words%20occurring%20together.

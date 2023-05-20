@@ -1,5 +1,7 @@
 # AIL
 
+https://medium.com/analytics-vidhya/word-vectorization-using-glove-76919685ee0b
+
 https://www.youtube.com/watch?v=6uxVtUMtqtk   -Glove (feature extraction)
 
 https://github.com/abulbasar/neural-networks/blob/master/Keras%2010%20-%20Text%20classification%20using%20pre-trained%20GloVe%20Word%20Embeddings.ipynb

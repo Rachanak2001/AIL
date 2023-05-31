@@ -1,5 +1,7 @@
 # AIL
 
+https://www.geeksforgeeks.org/ensemble-methods-in-python/ -Ensemble svm
+
 http://christopher5106.github.io/deep/learning/2020/04/02/fasttext_pretrained_embeddings_subword_word_representations.html
 
 https://medium.com/analytics-vidhya/word-vectorization-using-glove-76919685ee0b

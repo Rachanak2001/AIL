@@ -1,5 +1,7 @@
 # AIL
 
+https://medium.com/@yashvardhanvs/classification-using-pre-trained-bert-model-transfer-learning-2d50f404ed4c
+
 https://www.geeksforgeeks.org/ensemble-methods-in-python/ -Ensemble svm
 
 http://christopher5106.github.io/deep/learning/2020/04/02/fasttext_pretrained_embeddings_subword_word_representations.html

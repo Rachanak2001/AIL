@@ -1,5 +1,17 @@
 # AIL
 
+https://github.com/goru001/inltk  --- language detection, sentence split(all in one)
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
 https://www.codingninjas.com/codestudio/library/glove-embedding-in-nlp#:~:text=The%20primary%20idea%20behind%20the,in%20the%20co%2Doccurrence%20matrix.
 
 https://medium.com/@yashvardhanvs/classification-using-pre-trained-bert-model-transfer-learning-2d50f404ed4c
